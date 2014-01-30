@@ -1,0 +1,17 @@
+{
+  "name": "fsm",
+  "version": "0.0.0",
+  "description": "Finite state machine ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fsm",
+    "state",
+    "machine",
+    "finite"
+  ],
+  "author": "nox73, alexeyfrank",
+  "license": "MIT"
+}
