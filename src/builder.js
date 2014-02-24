@@ -13,8 +13,6 @@ Builder.prototype.build = function(fsm) {
     }(eventName));
   }
 
-  fsm.setInitialState(this._params.initialState);
-
   return fsm;
 };
 

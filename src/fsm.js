@@ -15,6 +15,11 @@ Fsm.build = function(buildFn) {
   return fsm;
 }
 
+Fsm.createFrom = function(proto) {
+  return Object.create(proto);
+}
+
+
 Fsm.prototype = {
   _runEvent: function(eventName) {
     var transitions = this._params.events[eventName];
@@ -77,13 +82,11 @@ Fsm.prototype = {
     return this._context[this._stateField];
   },
 
-  setContext: function(ctx) {
+  setContext: function(ctx, fieldName) {
     this._context = ctx;
-  },
-
-  setStateField: function(fieldName) {
     this._stateField = fieldName;
-  }
+    this.setInitialState(this._params.initialState);
+  },
 };
 
 module.exports = Fsm;

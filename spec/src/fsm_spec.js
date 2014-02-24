@@ -31,6 +31,7 @@ describe('FSM builder test suite', function() {
 
     fsm = new Fsm();
     builder.build(fsm);
+    fsm.setContext({}, 'state');
   });
 
   it('has valid events and transitions', function() {
